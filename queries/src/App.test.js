@@ -1,9 +1,9 @@
 import React from 'react';
-import { render, screen, fireEvent, findAllByRole } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
 describe('getBy', () => {
-  it('get the title', () => {
+  it('title is in the document', () => {
     render(<App />);
 
     const title = screen.getByText(/title/i);
@@ -23,7 +23,7 @@ describe('getBy', () => {
 });
 
 describe('getAllBy', () => {
-  it('get the items', () => {
+  it('items are in the document', () => {
     render(<App />);
 
     const items = screen.getAllByTestId(/list-item/i);
@@ -47,7 +47,7 @@ describe('getAllBy', () => {
 });
 
 describe('queryBy', () => {
-  it('get the title', () => {
+  it('title is in the document', () => {
     render(<App />);
 
     const title = screen.queryByText(/title/i);
@@ -65,7 +65,7 @@ describe('queryBy', () => {
 });
 
 describe('queryAllBy', () => {
-  it('get the items', () => {
+  it('items are in the document', () => {
     render(<App />);
 
     const items = screen.queryAllByTestId(/list-item/i);
