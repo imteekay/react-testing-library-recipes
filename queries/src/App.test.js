@@ -1,9 +1,21 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 
-it('using getBy query', () => {
-  const { getByTestId } = render(<App />);
-  const linkElement = getByTestId('title');
-  expect(linkElement).toBeInTheDocument();
+describe('getBy', () => {
+  it('get the title', () => {
+    render(<App />);
+    const linkElement = screen.getByTestId('title');
+    expect(linkElement).toBeInTheDocument();
+  });
+
+  it('verify no element', () => {
+    render(<App />);
+
+    try {
+      screen.getByTestId('subtitle');
+    } catch (e) {
+      console.log('Did not find nonexistent element');
+    }
+  });
 });
