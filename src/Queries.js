@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const App = () => {
+const Queries = () => {
   const [isParagraphVisible, setIsParagraphVisible] = useState(false);
   const [isImagesVisible, setIsImagesVisible] = useState(false);
 
@@ -33,4 +33,4 @@ const App = () => {
   )
 };
 
-export default App;
+export default Queries;

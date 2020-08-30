@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from '../App';
+import Queries from '../Queries';
 
 describe('getBy', () => {
   it('title is in the document', () => {
-    render(<App />);
+    render(<Queries />);
 
     const title = screen.getByText(/title/i);
 
@@ -12,7 +12,7 @@ describe('getBy', () => {
   });
 
   it('verify no element', () => {
-    render(<App />);
+    render(<Queries />);
 
     try {
       screen.getByText(/subtitle/i);
@@ -24,7 +24,7 @@ describe('getBy', () => {
 
 describe('getAllBy', () => {
   it('items are in the document', () => {
-    render(<App />);
+    render(<Queries />);
 
     const items = screen.getAllByTestId(/list-item/i);
 
@@ -36,7 +36,7 @@ describe('getAllBy', () => {
   });
 
   it('verify no other item', () => {
-    render(<App />);
+    render(<Queries />);
 
     try {
       screen.getAllByTestId(/other-item/i);

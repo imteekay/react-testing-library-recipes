@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import App from '../App';
+import Queries from '../Queries';
 
 describe('findBy', () => {
   it('paragraph is in the document', async () => {
-    render(<App />);
+    render(<Queries />);
 
     const button = screen.getByRole('button', { name: /show paragraph/i });
     fireEvent.click(button);
@@ -14,7 +14,7 @@ describe('findBy', () => {
   });
 
   it('verify no other item', async () => {
-    render(<App />);
+    render(<Queries />);
 
     const button = screen.getByRole('button', { name: /show paragraph/i });
     fireEvent.click(button);
@@ -29,7 +29,7 @@ describe('findBy', () => {
 
 describe('findAllBy', () => {
   it('images found', async () => {
-    render(<App />);
+    render(<Queries />);
 
     const button = screen.getByRole('button', { name: /show images/i })
     fireEvent.click(button);
@@ -40,7 +40,7 @@ describe('findAllBy', () => {
 
 
   it('verify no other texts', async () => {
-    render(<App />);
+    render(<Queries />);
 
     const button = screen.getByRole('button', { name: /show images/i })
     fireEvent.click(button);
