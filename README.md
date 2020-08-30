@@ -2,4 +2,4 @@
 
 React Testing Library Recipes to test React Applications
 
-- [A recipe RTL queries API](./queries)
+- [A recipe for RTL queries API](./queries)
