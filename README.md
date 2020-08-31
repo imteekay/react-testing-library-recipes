@@ -12,6 +12,12 @@ Recipes to understand how to use the React Testing Library queries API.
 
 ## Content
 
-Recipe on how to expect content in the DOM.
+A recipe on how to expect content in the DOM.
 
 - [toBeInTheDocument](./src/tests/toBeInTheDocument.test.js)
+
+## Form
+
+A recipe to understand how to handle forms.
+
+- [form](./src/tests/form.test.js)
