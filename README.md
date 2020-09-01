@@ -2,6 +2,17 @@
 
 React Testing Library Recipes to test React Applications
 
+## Setup & Test
+
+Using [Codesandbox recipes](https://codesandbox.io/s/react-testing-library-recipes-q5c6f).
+
+Or running this project:
+
+```bash
+yarn install
+yarn test
+```
+
 ## Queries
 
 Recipes to understand how to use the React Testing Library queries API.
