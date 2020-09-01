@@ -3,7 +3,10 @@ import { render, screen } from '@testing-library/react';
 import Loading from '../Loading';
 
 describe('Loading', () => {
-  it('renders loading and then the pokemon info', async () => {
+  it('renders the loading and then the pokemon info', async () => {
+    const data = { name: 'charmander', types: [{ type: { name: 'fire' } }] };
+    fetch.once(JSON.stringify(data));
+
     render(<Loading pokemon="charmander" />);
 
     const loading = screen.getByText('Loading...');
@@ -14,5 +17,14 @@ describe('Loading', () => {
 
     expect(charmander).toBeInTheDocument();
     expect(charmanderSkills).toBeInTheDocument();
+  });
+
+  it('renders the error', async () => {
+    fetch.mockReject(() => Promise.reject('API is down'));
+
+    render(<Loading pokemon="charmander" />);
+
+    const error = await screen.findByText('Error!');
+    expect(error).toBeInTheDocument();
   });
 });
