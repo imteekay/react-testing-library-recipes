@@ -17,9 +17,9 @@ yarn test
 
 Recipes to understand how to use the React Testing Library queries API.
 
-- [findBy](./src/tests/findBy.test.js)
 - [getBy](./src/tests/getBy.test.js)
 - [queryBy](./src/tests/queryBy.test.js)
+- [findBy](./src/tests/findBy.test.js)
 
 ## Content
 
